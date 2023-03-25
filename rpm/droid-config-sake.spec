@@ -11,6 +11,10 @@
 %define community_adaptation 1
 %define android_version_major 11
 
+# Device-specific ofono configuration
+Provides: ofono-configs
+Obsoletes: ofono-configs-mer
+
 # Sailfish OS is considered to-scale, if in the App Grid you get 4-in-a-row icons,
 # and 2-in-a-row or 3-in-a-row app covers in the Home Screen, depending on
 # how many apps are open.

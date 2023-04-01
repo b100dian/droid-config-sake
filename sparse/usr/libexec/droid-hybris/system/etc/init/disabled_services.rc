@@ -11,6 +11,8 @@ service media mediaserver_HYBRIS_DISABLED
 service update_engine update_engine_HYBRIS_DISABLED
 
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service_HYBRIS_DISABLED
+    override
+    disabled
 
 service lmkd /system/bin/lmkd_HYBRIS_DISABLED
 

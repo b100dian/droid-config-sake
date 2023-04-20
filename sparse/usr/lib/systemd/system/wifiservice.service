@@ -1,0 +1,13 @@
+[Unit]
+Description=wifisetup
+After=droid-hal-init.service
+Before=connman.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/sbin/modprobe qca_cld3_wlan
+
+[Install]
+WantedBy=network.target
+

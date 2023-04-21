@@ -32,6 +32,10 @@ Requires: qt5-plugin-generic-evdev
 Requires: pulseaudio-modules-droid
 Requires: pulseaudio-modules-droid-hidl
 
+# Telephony
+Requires: ofono-binder-plugin
+Requires: dummy_netd
+
 # The -dummy-af is needed for newer devices that run the main
 # audiosystem-passthrough in qti mode (e.g. >=Android 9 Qualcomm),
 # to fix non-responding Camera app and/or voice during a phone call:

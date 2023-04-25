@@ -19,6 +19,9 @@ Requires: libhybris-libEGL
 Requires: libhybris-libGLESv2
 Requires: libhybris-libwayland-egl
 
+# Bluetooth
+Requires: bluebinder
+
 # Sensors
 Requires: hybris-libsensorfw-qt5
 
@@ -39,7 +42,7 @@ Requires: dummy_netd
 # The -dummy-af is needed for newer devices that run the main
 # audiosystem-passthrough in qti mode (e.g. >=Android 9 Qualcomm),
 # to fix non-responding Camera app and/or voice during a phone call:
-#Requires: audiosystem-passthrough-dummy-af
+Requires: audiosystem-passthrough-dummy-af
 
 # for audio recording to work:
 Requires: qt5-qtmultimedia-plugin-mediaservice-gstmediacapture

@@ -12,6 +12,13 @@ ln -s /dev/bsg/ufs-bsg0 /dev/ufs-bsg
 # Allows libui_compat_layer to work
 mount -o bind /dev/null /vendor/lib64/hw/gralloc.default.so
 
+### Below commands are not technically related to droid-hal-init starting
+### they are just here for convenience.
+
 # D2TW
-echo 1 > /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_aod_ctrl_mode
-echo 1 > /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_gesture_mode
+echo 1 > /proc/driver/dclick
+
+# Power vibra
+/sbin/modprobe aw8697
+echo 1 > /sys/class/leds/vibrator/activate_mode
+

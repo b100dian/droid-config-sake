@@ -5,6 +5,7 @@
 Summary: Jolla HW Adaptation sake
 Requires: droid-hal-sake
 Requires: droid-hal-sake-img-boot
+Requires: droid-hal-sake-kernel
 Requires: droid-hal-sake-kernel-modules
 Requires: droid-config-sake-sailfish
 Requires: droid-config-sake-pulseaudio-settings

@@ -1,0 +1,8 @@
+CPUCHECK_STRING="fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm lrcpc dcpop asimddp"
+
+PART_1="boot_a"
+PART_REAL_1="sde11"
+
+PART_2="boot_b"
+PART_REAL_2="sde36"
+PART_I="1 2"

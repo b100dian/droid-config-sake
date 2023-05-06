@@ -1,7 +1,7 @@
 [Service]
 # This waits for init to switch linkerconfig.. then 5 more seconds.
-# Allows lipstick and boosters (user@.service in general) to see a working droid-hal env.
-ExecStartPre=/bin/bash /usr/bin/droid/wait_for_linkerconfig.sh user
+# Allows encryption password GUI to start.
+ExecStartPre=/bin/bash /usr/bin/droid/wait_for_linkerconfig.sh system
 ExecStart=/usr/bin/sleep 5
 Restart=on-failure
 RestartSec=1

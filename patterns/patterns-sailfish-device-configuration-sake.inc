@@ -34,6 +34,9 @@ Requires: patterns-sailfish-consumer-generic
 # For Mozilla location services (online)
 Requires: geoclue-provider-mlsdb
 
+# For encryption hwsupport
+Requires: droid-hwcrypt
+
 # Devices with 2G or more memory should also include this booster
 # to improve camera startup times and the like
 #Requires: mapplauncherd-booster-silica-qt5-media

@@ -7,6 +7,8 @@ service cameraserver cameraserver_HYBRIS_DISABLED
 service audioserver audioserver_HYBRIS_DISABLED
 
 service media mediaserver_HYBRIS_DISABLED
+    override
+    disabled
 
 service update_engine update_engine_HYBRIS_DISABLED
 

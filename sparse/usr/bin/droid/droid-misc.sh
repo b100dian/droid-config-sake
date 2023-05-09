@@ -10,3 +10,5 @@ echo 1 > /proc/driver/dclick
 /sbin/modprobe aw8697
 echo 1 > /sys/class/leds/vibrator/activate_mode
 
+# Video recording
+setprop debug.stagefright.c2inputsurface -1

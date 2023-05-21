@@ -6,6 +6,7 @@ Before=connman.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+ExecStartPre=/bin/mount -o bind /etc/WCNSS_qcom_cfg.ini /vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
 ExecStart=/sbin/modprobe qca_cld3_wlan
 
 [Install]

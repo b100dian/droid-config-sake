@@ -8,6 +8,8 @@ echo 1 > /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/fs_ready
 
 # Allows qseecomd to start
 ln -s /dev/bsg/ufs-bsg0 /dev/ufs-bsg
+# Still qseecomd, fingerprint
+ln -s /dev/bsg/0\:0\:0\:49476  /dev/0\:0\:0\:49476
 
 # Allows libui_compat_layer to work
 mount -o bind /dev/null /vendor/lib64/hw/gralloc.default.so

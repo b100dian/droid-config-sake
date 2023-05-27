@@ -4,7 +4,11 @@
 echo -n "/vendor/firmware" > /sys/module/firmware_class/parameters/path
 
 # Enable WLAN cold boot calibration
-echo 1 > /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/fs_ready
+# [Disabled] echo 1 > /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/fs_ready
+# We let android services do CBC on post-fs-data
+# Then they'll find this driver right where expected
+mount -o bind /etc/WCNSS_qcom_cfg.ini /vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
+mount -o bind /lib/modules/$(uname -r)/qca_cld3_wlan.ko /vendor/lib/modules/qca_cld3_wlan.ko
 
 # Allows qseecomd to start
 ln -s /dev/bsg/ufs-bsg0 /dev/ufs-bsg

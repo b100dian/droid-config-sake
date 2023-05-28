@@ -1,0 +1,11 @@
+on boot
+    chown system input /sys/class/leds/vibrator/activate
+    chown system input /sys/class/leds/vibrator/duration
+    chown system input /sys/class/leds/vibrator/brightness
+    chown system input /sys/class/leds/vibrator/gain
+    chmod 0664 /sys/class/leds/vibrator/activate
+    chmod 0664 /sys/class/leds/vibrator/duration
+    chmod 0664 /sys/class/leds/vibrator/brightness
+    chmod 0664 /sys/class/leds/vibrator/gain
+
+service vendor.qti.vibrator /vendor/bin/hw/vendor.qti.hardware.vibrator.service_HYBRIS_DISABLED

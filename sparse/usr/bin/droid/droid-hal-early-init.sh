@@ -3,6 +3,8 @@
 # This should prevent `echo 1 > /dev/ipa` to crash the kernel
 echo -n "/vendor/firmware" > /sys/module/firmware_class/parameters/path
 
+# Enable WLAN recovery
+echo 1 > /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/recovery
 # Enable WLAN cold boot calibration
 # [Disabled] echo 1 > /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/fs_ready
 # We let android services do CBC on post-fs-data

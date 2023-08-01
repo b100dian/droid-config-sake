@@ -9,8 +9,11 @@ echo 1 > /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/recovery
 # [Disabled] echo 1 > /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/fs_ready
 # We let android services do CBC on post-fs-data
 # Then they'll find this driver right where expected
-mount -o bind /etc/WCNSS_qcom_cfg.ini /vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
 mount -o bind /lib/modules/$(uname -r)/qca_cld3_wlan.ko /vendor/lib/modules/qca_cld3_wlan.ko
+# If you want to edit the ini in /etc
+mount -o bind /etc/WCNSS_qcom_cfg.ini /vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
+# Should help with power consumption
+echo deep > /sys/power/mem_sleep
 
 # Allows qseecomd to start
 ln -s /dev/bsg/ufs-bsg0 /dev/ufs-bsg

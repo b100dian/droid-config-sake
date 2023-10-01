@@ -1,0 +1,4 @@
+# TODO fix qti autodetection
+AUDIOSYSTEM_PASSTHROUGH_TYPE=qti
+HYBRIS_USE_VENDOR_NAMESPACE=yes
+CONFIG="-n --file=/etc/pulse/arm_droid_default.pa"

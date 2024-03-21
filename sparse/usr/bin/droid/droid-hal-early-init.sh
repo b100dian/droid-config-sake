@@ -12,8 +12,6 @@ echo 1 > /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/recovery
 mount -o bind /lib/modules/$(uname -r)/qca_cld3_wlan.ko /vendor/lib/modules/qca_cld3_wlan.ko
 # If you want to edit the ini in /etc
 mount -o bind /etc/WCNSS_qcom_cfg.ini /vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
-# Should help with power consumption
-echo deep > /sys/power/mem_sleep
 
 # Allows qseecomd to start
 ln -s /dev/bsg/ufs-bsg0 /dev/ufs-bsg

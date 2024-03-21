@@ -5,7 +5,7 @@ After=droid-hal-init.service init-done.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStartPre=/sbin/sleep 5                               
+ExecStartPre=/bin/sleep 5                               
 ExecStart=/bin/bash -c 'echo deep > /sys/power/mem_sleep'
          
 [Install]                 

@@ -5,6 +5,9 @@ ln -sf /dev/binderfs/* /dev/
 
 # D2TW
 echo 1 > /proc/driver/dclick
+# Single tap to wake
+echo 1 > /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_aod_ctrl_mode
+echo 1 > /sys/devices/platform/soc/990000.i2c/i2c-1/1-0038/fts_gesture_mode
 
 # Power vibra
 /sbin/modprobe aw8697
